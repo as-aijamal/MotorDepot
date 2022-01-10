@@ -38,13 +38,11 @@ public class Main {
             }
             print(cars);
             print(drivers);
-
         }
-
     }
 
     public static void print(Car[] cars) {
-        System.out.println("~~~~~~~~~~~~ * CARS * ~~~~~~~~~~~~~~");
+        System.out.println("~~~~~~~~~~~~ * TRUCKS * ~~~~~~~~~~~~");
         System.out.println(" # |    Bus    |  Driver  |  State");
         System.out.println("---+-----------+----------+---------");
         for (int j = 0; j < cars.length; j++) {
@@ -66,5 +64,4 @@ public class Main {
         System.out.println("Press to 2 to start driving");
         System.out.println("Press to 3 to start repair");
     }
-
 }

@@ -52,12 +52,12 @@ public class Driver {
         Driver[] drivers = {
                 new Driver("driver-1", "John"),
                 new Driver("driver-2", "Liam"),
-                new Driver("driver-3", "Adam"),
-        };
-//        Gson gson=new Gson();
-//        String json=GSON.toJson(drivers);
-//        writeDriverFile(json);
-//        System.out.println(readDriverFile());
+                new Driver("driver-3", "Adam")};
+
+        Gson gson=new Gson();
+        String json=GSON.toJson(drivers);
+        writeDriverFile(json);
+        System.out.println(readDriverFile());
 
         Driver[] drivers1 = GSON.fromJson(readDriverFile(), Driver[].class);
         for (Driver driver : drivers1) {

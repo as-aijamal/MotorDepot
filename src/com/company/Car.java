@@ -64,13 +64,12 @@ public class Car {
         Car[] cars = {
                 new Car(1, "Renault", "", "base"),
                 new Car(2, "Volvo  ", "", "base"),
-                new Car(3, "DAF XT ", "", "base"),
-        };
+                new Car(3, "DAF XT ", "", "base")};
 
-//        Gson gson = new Gson();
-//        String json=GSON.toJson(cars);
-//        System.out.println(readCarFile());
-//        write(json);
+        Gson gson = new Gson();
+        String json=GSON.toJson(cars);
+        System.out.println(readCarFile());
+        writeCarFile(json);
 
         Car[] truck = GSON.fromJson(readCarFile(), Car[].class);
         for (Car car : truck) {

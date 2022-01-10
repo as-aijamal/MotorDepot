@@ -26,7 +26,6 @@ public class ServiceImpl implements Service {
             } else {
                 System.out.println("There is no driver!!!");
             }
-
         } else if (car.getState().equals("route")) {
             System.out.println("Driver is ALREADY on the way!!!");
         } else {
@@ -52,6 +51,5 @@ public class ServiceImpl implements Service {
         } else {
             System.out.println("Truck is ALREADY under repair!!!");
         }
-
     }
 }

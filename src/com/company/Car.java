@@ -59,10 +59,8 @@ public class Car {
         this.state = state;
     }
 
-    public static void makeCar() {
-        System.out.println("~~~~~~~~~~~~ * CARS * ~~~~~~~~~~~~~~");
-        System.out.println(" # |    Bus    |  Driver  |  State");
-        System.out.println("---+-----------+----------+---------");
+    public static void getCar() {
+
         Car[] cars = {
                 new Car(1, "Renault", "", "base"),
                 new Car(2, "Volvo  ", "", "base"),
@@ -107,9 +105,9 @@ public class Car {
     @Override
     public String toString() {
         return
-                " "+id +
-                " | "+name  +
-                "   |    "+driver +
-                "      |  "+ state ;
+                " " + id +
+                        " | " + name +
+                        "   |    " + driver +
+                        "      |  " + state;
     }
 }

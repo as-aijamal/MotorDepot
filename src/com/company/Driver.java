@@ -16,6 +16,15 @@ public class Driver {
     public static final Path WRITE_PATH = Paths.get("./drivers.json");
     private String id;
     private String driver;
+    private String bus;
+
+    public String getBus() {
+        return bus;
+    }
+
+    public void setBus(String bus) {
+        this.bus = bus;
+    }
 
     public Driver(String id, String driver) {
         this.id = id;
@@ -39,9 +48,6 @@ public class Driver {
     }
 
     public static void getDrivers() {
-        System.out.println("~~~~~~~~~~ * DRIVERS * ~~~~~~~~~~~~~");
-        System.out.println("     #    |   Driver   |   Bus      ");
-        System.out.println("----------+------------+------------");
 
         Driver[] drivers = {
                 new Driver("driver-1", "John"),
@@ -83,11 +89,18 @@ public class Driver {
         return json;
     }
 
+    public static void getInfo(Car car) {
+        System.out.println("N: " + car.getId());
+        System.out.println("Name: " + car.getName());
+        System.out.println("Driver: " + car.getDriver());
+        System.out.println("State: " + car.getState());
+    }
+
     @Override
     public String toString() {
         return
                 " " + id +
-                " |    " + driver +
-                "    |";
+                        " |    " + driver +
+                        "    |" + bus;
     }
 }
